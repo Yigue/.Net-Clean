@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GDD7qwzJY/dCn1cXPxzTyTQCpacgOOPSILlLtXu1J8PdKoMdtDx5++bVYpVGWKHPGvzGHXLyxv1BolG15IGdBA==",
+  "success": true,
+  "projectFilePath": "D:\\Proyectos\\Cursos\\C#\\net\\CleanArchictecture\\src\\CleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\guill\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
