@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LwPMVVVqQTeH3bAi30+Pe4HSl79/Ezjw9SKx6RWvI/7BJPnFsVM2cY0/AN20hUYtG9v4ET4OA5F+uHz0iU12Gw==",
+  "dgSpecHash": "YC9Rzfce4+oLo7iN/tgZCQOiuSJbwgHcOJsmlQG4RHScb1IkUCP0MJB1DVeHdbB1kmd4mehj6GRVickV8sMZ5w==",
   "success": true,
   "projectFilePath": "D:\\Proyectos\\Cursos\\C#\\net\\CleanArchictecture\\src\\CleanArchitecture\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\guill\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\guill\\.nuget\\packages\\dapper\\2.1.15\\dapper.2.1.15.nupkg.sha512",
     "C:\\Users\\guill\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\guill\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",

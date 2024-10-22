@@ -3,7 +3,6 @@ using CleanArchitecture.Application.Abstractions.Messaging;
 using CleanArchitecture.Application.Exceptions;
 using CleanArchitecture.Domain.Abstractions;
 using CleanArchitecture.Domain.Alquileres;
-using CleanArchitecture.Domain.Reviews;
 using CleanArchitecture.Domain.Users;
 using CleanArchitecture.Domain.Vehiculos;
 
@@ -41,6 +40,7 @@ internal sealed class ReservarAlquilerCommandHandler :
         CancellationToken cancellationToken
         )
     {
+
         var userId = new UserId(request.UserId);
         var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
 
@@ -49,7 +49,8 @@ internal sealed class ReservarAlquilerCommandHandler :
             return Result.Failure<Guid>(UserErrors.NotFound);
         }
 
-        var vehiculo = await _vehiculoRepository.GetByIdAsync(request.VehiculoId, cancellationToken);
+        var vehiculoId=new VehiculoId(request.VehiculoId);
+        var vehiculo = await _vehiculoRepository.GetByIdAsync(vehiculoId, cancellationToken);
         if (vehiculo is null)
         {
             return Result.Failure<Guid>(VehiculoErrors.NotFound);
@@ -66,7 +67,7 @@ internal sealed class ReservarAlquilerCommandHandler :
         {
             var alquiler = Alquiler.Reservar(
                 vehiculo,
-                user.Id,
+                user.Id!,
                 duracion,
                 _dateTimeProvider.currentTime,
                 _precioService
@@ -76,7 +77,7 @@ internal sealed class ReservarAlquilerCommandHandler :
 
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return alquiler.Id;
+            return alquiler.Id!.Value;
         }
         catch (ConcurrencyException)
         {

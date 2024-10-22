@@ -1,6 +1,6 @@
 namespace CleanArchitecture.Domain.Abstractions;
 
-public abstract class Entity<TEntityID>
+public abstract class Entity<TEntityId> : IEntity
 {
     protected Entity()
     {
@@ -8,12 +8,12 @@ public abstract class Entity<TEntityID>
     }
     private readonly List<IDomainEvent> _domainEvents = new();
     
-    protected Entity(TEntityID id)
+    protected Entity(TEntityId id)
     {
         Id = id;
     }
     
-    public TEntityID Id {get ; init;}
+    public TEntityId? Id {get ; init;}
 
     public IReadOnlyList<IDomainEvent> GetDomainEvents()
     {
